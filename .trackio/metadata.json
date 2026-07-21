@@ -1,0 +1,86 @@
+{
+  "space_id": null,
+  "emoji": "🎯",
+  "created_at": "2026-07-21T14:16:06+00:00",
+  "title": "Repro - Anytime Detection of Strategic Deviations in Multi-Agent Systems",
+  "paper": {
+    "arxiv_id": "2601.05427",
+    "openreview_id": "hXO2OP0T4w"
+  },
+  "tags": [
+    "icml2026-repro",
+    "paper-hXO2OP0T4w"
+  ],
+  "autosync": true,
+  "private": false,
+  "local_dashboards": {},
+  "local_path_artifacts": [
+    {
+      "path": "upstream/results/soccer/nash_history.csv",
+      "abs_path": "/home/dineshai/Drives/Code/AllCode/ReproduceICML/papers/icml26-repro-hXO2OP0T4w-anytime-deviation/upstream/results/soccer/nash_history.csv",
+      "size": 2582,
+      "artifact_type": "dataset"
+    },
+    {
+      "path": "upstream/results/soccer/afraid_history.csv",
+      "abs_path": "/home/dineshai/Drives/Code/AllCode/ReproduceICML/papers/icml26-repro-hXO2OP0T4w-anytime-deviation/upstream/results/soccer/afraid_history.csv",
+      "size": 2556,
+      "artifact_type": "dataset"
+    },
+    {
+      "path": "upstream/results/predator-prey/history.csv",
+      "abs_path": "/home/dineshai/Drives/Code/AllCode/ReproduceICML/papers/icml26-repro-hXO2OP0T4w-anytime-deviation/upstream/results/predator-prey/history.csv",
+      "size": 1609,
+      "artifact_type": "dataset"
+    },
+    {
+      "path": "outputs/executed/normal-form.no-tex.executed.ipynb",
+      "abs_path": "/home/dineshai/Drives/Code/AllCode/ReproduceICML/papers/icml26-repro-hXO2OP0T4w-anytime-deviation/outputs/executed/normal-form.no-tex.executed.ipynb",
+      "size": 742026,
+      "artifact_type": "dataset"
+    },
+    {
+      "path": "outputs/executed/normal-form.repeat.no-tex.executed.ipynb",
+      "abs_path": "/home/dineshai/Drives/Code/AllCode/ReproduceICML/papers/icml26-repro-hXO2OP0T4w-anytime-deviation/outputs/executed/normal-form.repeat.no-tex.executed.ipynb",
+      "size": 742026,
+      "artifact_type": "dataset"
+    },
+    {
+      "path": "outputs/executed/soccer.no-tex.executed.ipynb",
+      "abs_path": "/home/dineshai/Drives/Code/AllCode/ReproduceICML/papers/icml26-repro-hXO2OP0T4w-anytime-deviation/outputs/executed/soccer.no-tex.executed.ipynb",
+      "size": 184845,
+      "artifact_type": "dataset"
+    },
+    {
+      "path": "outputs/executed/soccer.repeat.no-tex.executed.ipynb",
+      "abs_path": "/home/dineshai/Drives/Code/AllCode/ReproduceICML/papers/icml26-repro-hXO2OP0T4w-anytime-deviation/outputs/executed/soccer.repeat.no-tex.executed.ipynb",
+      "size": 184846,
+      "artifact_type": "dataset"
+    },
+    {
+      "path": "outputs/executed/predator-prey.no-tex.executed.ipynb",
+      "abs_path": "/home/dineshai/Drives/Code/AllCode/ReproduceICML/papers/icml26-repro-hXO2OP0T4w-anytime-deviation/outputs/executed/predator-prey.no-tex.executed.ipynb",
+      "size": 179567,
+      "artifact_type": "dataset"
+    },
+    {
+      "path": "outputs/executed/predator-prey.repeat.no-tex.executed.ipynb",
+      "abs_path": "/home/dineshai/Drives/Code/AllCode/ReproduceICML/papers/icml26-repro-hXO2OP0T4w-anytime-deviation/outputs/executed/predator-prey.repeat.no-tex.executed.ipynb",
+      "size": 179568,
+      "artifact_type": "dataset"
+    },
+    {
+      "path": "outputs/independent_verdict.json",
+      "abs_path": "/home/dineshai/Drives/Code/AllCode/ReproduceICML/papers/icml26-repro-hXO2OP0T4w-anytime-deviation/outputs/independent_verdict.json",
+      "size": 719,
+      "artifact_type": "dataset"
+    },
+    {
+      "path": "outputs/publication_gate.json",
+      "abs_path": "/home/dineshai/Drives/Code/AllCode/ReproduceICML/papers/icml26-repro-hXO2OP0T4w-anytime-deviation/outputs/publication_gate.json",
+      "size": 2086,
+      "artifact_type": "dataset"
+    }
+  ],
+  "last_page": "conclusion"
+}

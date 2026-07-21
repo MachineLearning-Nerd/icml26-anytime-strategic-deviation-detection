@@ -1,0 +1,57 @@
+{
+  "paper": "hXO2OP0T4w",
+  "pinned_source": "GauthierE/anytime-detection-deviation@42b8f0edfe76fb9dd006e9cab84f6cb8b75849c6",
+  "expected_claims": 6,
+  "full_source_runs": {
+    "normal-form.no-tex.executed.ipynb": {
+      "code_matches_pinned_source_with_only_tex_fallback": true,
+      "all_code_cells_executed": true,
+      "code_cell_errors": [],
+      "sha256": "e8691d67ac4218c3594f971d354f18bbc2dc843e2843e3c80b6ba0d24b52535b",
+      "pass": true
+    },
+    "normal-form.repeat.no-tex.executed.ipynb": {
+      "code_matches_pinned_source_with_only_tex_fallback": true,
+      "all_code_cells_executed": true,
+      "code_cell_errors": [],
+      "sha256": "97b0c87cf8185dc86aa60684b5dedeb363b55440afe1b023595717089a55b0db",
+      "pass": true
+    },
+    "soccer.no-tex.executed.ipynb": {
+      "code_matches_pinned_source_with_only_tex_fallback": true,
+      "all_code_cells_executed": true,
+      "code_cell_errors": [],
+      "sha256": "9987aabb5bd04af5090d22b097834f55f0748e9d7e020e24bf3c0fb83bb05ad1",
+      "pass": true
+    },
+    "soccer.repeat.no-tex.executed.ipynb": {
+      "code_matches_pinned_source_with_only_tex_fallback": true,
+      "all_code_cells_executed": true,
+      "code_cell_errors": [],
+      "sha256": "437034fa13dbb18be08417c69cac4859b5e6300d71cfe71a159b3e37debead60",
+      "pass": true
+    },
+    "predator-prey.no-tex.executed.ipynb": {
+      "code_matches_pinned_source_with_only_tex_fallback": true,
+      "all_code_cells_executed": true,
+      "code_cell_errors": [],
+      "sha256": "43614a343308b7d2004a53456573f25a274568e11c8e9b158836f80984e48af6",
+      "pass": true
+    },
+    "predator-prey.repeat.no-tex.executed.ipynb": {
+      "code_matches_pinned_source_with_only_tex_fallback": true,
+      "all_code_cells_executed": true,
+      "code_cell_errors": [],
+      "sha256": "86673a197404c29a9b38099b15edd859c31646739af2928f45693ad98137ca44",
+      "pass": true
+    },
+    "pass": true
+  },
+  "repeat_verifier_passed": true,
+  "tests_passed": true,
+  "secret_scan": {
+    "hits": [],
+    "pass": true
+  },
+  "publication_gate_passed": true
+}

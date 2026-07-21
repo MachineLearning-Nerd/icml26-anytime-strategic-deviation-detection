@@ -1,0 +1,33 @@
+{
+  "c1_evalue_identity": {
+    "max_abs_evalue_mean_error": 0.0,
+    "pass": true
+  },
+  "c2_fwer_control": {
+    "runs": 20000,
+    "horizon": 1000,
+    "fwer": 0.0303,
+    "pass": true
+  },
+  "c3_c4_detection_and_fdr": {
+    "runs": 250,
+    "fwer_mean_stop": 1747.104,
+    "fdr_mean_stop": 1527.844,
+    "fdr_speedup": 1.1435094158827734,
+    "pass": true
+  },
+  "c5_mixture_identity": {
+    "null_lr_mean": 0.9999999999999999,
+    "alternative_log_growth": 0.23645627415367648,
+    "pass": true
+  },
+  "stochastic_scalings": {
+    "soccer_monotone": true,
+    "predator_monotone": true,
+    "repeat_exists": true,
+    "repeat_equal": true,
+    "source_artifacts_checked": 2,
+    "pass": true
+  },
+  "pass": true
+}
