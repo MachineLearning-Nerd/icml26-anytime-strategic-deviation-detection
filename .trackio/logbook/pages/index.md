@@ -18,9 +18,11 @@
 <!-- trackio-cell
 {"type": "markdown", "id": "cell_e7a3af27f1e7", "created_at": "2026-07-21T14:19:38+00:00", "title": "Outcome"}
 -->
-Full source-scale CPU execution and the first independent verification pass support all six registered claim groups. Publication remains gated on a separate clean repeat, final tests, and secret scan.
+Full source-scale CPU execution, deterministic repeats, the independent verifier, and the exact Claim 6 audit support all six registered claim groups at the declared finite protocol scope. The evidence-release gate is passed; the strict universal paper-claim gate remains not ready.
 
 - Paper: arXiv 2601.05427
 - OpenReview: hXO2OP0T4w
 - Pinned source: GauthierE/anytime-detection-deviation@42b8f0edfe76fb9dd006e9cab84f6cb8b75849c6
 - Scope: all three released notebooks; no reduced trial grid or proxy experiment.
+- Claim vector: C1–C6 VERIFIED_SCOPED
+- Raw source checkouts and executed notebooks are ignored; their hashes are retained in the publication gate.

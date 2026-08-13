@@ -4,7 +4,7 @@
   "emoji": "🎯",
   "space_id": null,
   "paper": {
-    "arxiv_id": "2601.05427",
+    "arxiv_id": "2601.05427v3",
     "openreview_id": "hXO2OP0T4w"
   },
   "tags": [
@@ -45,6 +45,12 @@
         "slug": "claim-6",
         "title": "Claim 6",
         "file": "pages/claim-6/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-6-scaling-exact",
+        "title": "Claim 6 — exact scaling audit",
+        "file": "pages/claim-6-scaling-exact/page.md",
         "children": []
       },
       {

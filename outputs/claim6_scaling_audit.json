@@ -1,0 +1,36 @@
+{
+  "claim": "Claim 6: Grid Soccer and unknown-epsilon Predator-Prey detection times follow O(1/epsilon^2)",
+  "paper_url": "https://ar5iv.labs.arxiv.org/html/2601.05427",
+  "paper_html_sha256": "85f6ed063ca67bd82faf7bd0632af425e0a12e40e5eaa218482f37f4261838e1",
+  "author_commit": "42b8f0edfe76fb9dd006e9cab84f6cb8b75849c6",
+  "source_outputs": {
+    "soccer": {
+      "epsilon": [0.05, 0.1, 0.2, 0.3, 0.5],
+      "mean_tau": [1322.0, 374.0, 118.9, 58.5, 16.4],
+      "slope": -1.8548593754781393,
+      "r2": 0.9939884077372827
+    },
+    "predator_prey_mixture": {
+      "epsilon": [0.05, 0.1, 0.2, 0.3, 0.4, 0.6, 0.8],
+      "mean_tau": [2413.6, 636.7, 156.4, 66.6, 41.8, 16.7, 9.8],
+      "slope": -1.994276513882541,
+      "r2": 0.999606760188286
+    }
+  },
+  "fresh_predator_prey_mixture": {
+    "monitor_grid": [0.1, 0.3, 0.5, 0.7, 0.9],
+    "off_grid_true_epsilons": [0.05, 0.2, 0.4, 0.6, 0.8],
+    "trials_per_epsilon": 256,
+    "max_steps": 5000,
+    "mean_tau": [2965.50390625, 621.69921875, 153.578125, 62.6875, 37.625, 18.44140625, 10.3828125],
+    "detected_fraction": [0.58203125, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+    "slope": -2.0302767450082557,
+    "r2": 0.9983039024839309
+  },
+  "negative_controls": {
+    "reversed_soccer_slope": 1.8352145445565524,
+    "constant_time_range": 0.0
+  },
+  "all_checks_passed": true,
+  "results_sha256": "ec1c6c7b0d2690ad59e6f30d3c49d9cc68a23f1d550b949a454a44ec3e49a5a4"
+}

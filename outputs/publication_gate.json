@@ -1,5 +1,19 @@
 {
+  "schema_version": 2,
+  "repository": {
+    "owner": "MachineLearning-Nerd",
+    "original_name": "icml26-repro-hXO2OP0T4w-anytime-deviation",
+    "target_name": "icml26-anytime-strategic-deviation-detection",
+    "default_branch": "main"
+  },
   "paper": "hXO2OP0T4w",
+  "paper_title": "Anytime Detection of Strategic Deviations in Multi-Agent Systems",
+  "arxiv": "2601.05427v3",
+  "authors": [
+    "Etienne Gauthier",
+    "Francis Bach",
+    "Michael I. Jordan"
+  ],
   "pinned_source": "GauthierE/anytime-detection-deviation@42b8f0edfe76fb9dd006e9cab84f6cb8b75849c6",
   "expected_claims": 6,
   "full_source_runs": {
@@ -48,10 +62,24 @@
     "pass": true
   },
   "repeat_verifier_passed": true,
+  "claim6_exact_scaling_audit_passed": true,
+  "claim6_exact_scaling_audit_sha256": "ee3c5b13eba1016792944dfa7136d5c48c15969ca72912eb5aaf857d8e1e9b78",
+  "claim6_exact_protocol_result_sha256": "ec1c6c7b0d2690ad59e6f30d3c49d9cc68a23f1d550b949a454a44ec3e49a5a4",
   "tests_passed": true,
   "secret_scan": {
     "hits": [],
     "pass": true
   },
+  "claim_status": {
+    "C1": "VERIFIED_SCOPED",
+    "C2": "VERIFIED_SCOPED",
+    "C3": "VERIFIED_SCOPED",
+    "C4": "VERIFIED_SCOPED",
+    "C5": "VERIFIED_SCOPED",
+    "C6": "VERIFIED_SCOPED"
+  },
+  "overall_status": "VERIFIED_SCOPED",
+  "evidence_release_gate": "PASSED",
+  "strict_paper_claim_gate": "NOT_READY",
   "publication_gate_passed": true
 }

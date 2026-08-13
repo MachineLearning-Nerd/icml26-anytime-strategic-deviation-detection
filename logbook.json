@@ -2,9 +2,9 @@
   "schema_version": 1,
   "title": "Repro - Anytime Detection of Strategic Deviations in Multi-Agent Systems",
   "emoji": "🎯",
-  "space_id": "DineshAI/hXO2OP0T4w",
+  "space_id": null,
   "paper": {
-    "arxiv_id": "2601.05427",
+    "arxiv_id": "2601.05427v3",
     "openreview_id": "hXO2OP0T4w"
   },
   "tags": [

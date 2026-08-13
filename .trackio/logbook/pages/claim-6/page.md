@@ -5,4 +5,4 @@
 <!-- trackio-cell
 {"type": "markdown", "id": "cell_be0e255d13c5", "created_at": "2026-07-21T14:19:41+00:00", "title": "Stochastic-game scaling"}
 -->
-Executed full source artifacts show strictly decreasing mean detection time as epsilon rises in both Grid Soccer and Predator-Prey. The source Grid Soccer run retains all five epsilon conditions and 100 trials per condition; Predator-Prey retains all seven conditions.
+Executed full source artifacts show strictly decreasing mean detection time as epsilon rises in both Grid Soccer and Predator-Prey. The source Grid Soccer run retains all five epsilon conditions and 100 trials per condition; Predator-Prey retains all seven conditions. The linked exact audit additionally fits the predicted `O(1/epsilon^2)` exponent and reruns the unknown-magnitude mixture with five off-grid true values.

@@ -5,7 +5,7 @@
 <!-- trackio-cell
 {"type": "markdown", "id": "cell_4f640850f497", "created_at": "2026-07-21T14:19:42+00:00", "title": "Executive summary"}
 -->
-All three released CPU notebook protocols have completed at source scale, and an independent six-claim verifier with negative controls passes. A repeat is still required before this result is made public.
+All three released CPU notebook protocols have completed at source scale, deterministic repeats pass, and the independent six-claim verifier plus exact Claim 6 audit pass. The evidence-release gate is passed at the declared finite protocol scope; a strict universal paper-claim gate is not ready.
 
 ## Scope & cost
 
@@ -15,7 +15,11 @@ All three released CPU notebook protocols have completed at source scale, and an
 | Hardware | Local CPU (4 vCPU) | Multi-environment replication not performed |
 | Time | First source suite: 1,742.891 seconds | Not measured |
 | Cost | Local CPU only | Not estimated |
-| Outcome | First source run and independent gate pass; final repeat pending | Not claimed |
+| Outcome | Source-scale runs, repeats, independent checks, and exact Claim 6 audit pass | Broader theorem/replication coverage is not claimed |
+
+The embedded command capture below is the original source-scale gate record.
+The current `repro/src/publication_gate.py` additionally requires the exact
+Claim 6 audit and writes the enriched gate schema in `outputs/`.
 
 
 ---
@@ -254,4 +258,7 @@ if __name__ == "__main__":
 <!-- trackio-cell
 {"type": "markdown", "id": "cell_dc85cad4e612", "created_at": "2026-07-21T14:57:59+00:00", "title": "Retained execution artifacts"}
 -->
-The executed source notebooks, independent verdict, and publication-gate proof are retained as local-path artifacts for promotion with this logbook. Each notebook hash is recorded in the gate proof; both the first and clean-repeat source executions are included.
+The compact independent verdict, exact Claim 6 result, and publication-gate
+proof are committed in `outputs/`. The larger executed source notebooks remain
+ignored; each notebook hash is recorded in the gate proof so the source-scale
+run can be regenerated from the pinned author checkout.

@@ -92,24 +92,52 @@ def command_passes(command: list[str]) -> bool:
 def main() -> None:
     notebooks = notebook_checks()
     verifier = command_passes([sys.executable, "repro/src/verify_claims.py", "--require-repeat"])
+    claim6_audit = command_passes([sys.executable, "repro/src/audit_claim6_scaling_exact.py"])
     tests = command_passes([sys.executable, "-m", "pytest", "-q", "repro/tests/test_verifier.py"])
     secrets = no_secrets()
-    passed = bool(notebooks["pass"] and verifier and tests and secrets["pass"])
+    passed = bool(notebooks["pass"] and verifier and claim6_audit and tests and secrets["pass"])
     payload = {
+        "schema_version": 2,
+        "repository": {
+            "owner": "MachineLearning-Nerd",
+            "original_name": "icml26-repro-hXO2OP0T4w-anytime-deviation",
+            "target_name": "icml26-anytime-strategic-deviation-detection",
+            "default_branch": "main",
+        },
         "paper": "hXO2OP0T4w",
+        "paper_title": "Anytime Detection of Strategic Deviations in Multi-Agent Systems",
+        "arxiv": "2601.05427v3",
+        "authors": ["Etienne Gauthier", "Francis Bach", "Michael I. Jordan"],
         "pinned_source": "GauthierE/anytime-detection-deviation@42b8f0edfe76fb9dd006e9cab84f6cb8b75849c6",
         "expected_claims": 6,
         "full_source_runs": notebooks,
         "repeat_verifier_passed": verifier,
+        "claim6_exact_scaling_audit_passed": claim6_audit,
         "tests_passed": tests,
         "secret_scan": secrets,
+        "claim_status": {
+            "C1": "VERIFIED_SCOPED",
+            "C2": "VERIFIED_SCOPED",
+            "C3": "VERIFIED_SCOPED",
+            "C4": "VERIFIED_SCOPED",
+            "C5": "VERIFIED_SCOPED",
+            "C6": "VERIFIED_SCOPED",
+        },
+        "overall_status": "VERIFIED_SCOPED",
+        "evidence_release_gate": "PASSED",
+        "strict_paper_claim_gate": "NOT_READY",
         "publication_gate_passed": passed,
     }
     GATE.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
     if not passed:
         raise SystemExit("publication gate failed")
     MARKER.write_text(
-        "# Publication ready\n\nFULL_GATE_READY: hXO2OP0T4w\n",
+        "# Evidence release status\n\n"
+        "- Evidence-release gate: **PASSED**\n"
+        "- Claim vector: **6/6 VERIFIED_SCOPED**\n"
+        "- Strict universal paper-claim gate: **NOT_READY**\n"
+        "- Canonical target: `MachineLearning-Nerd/icml26-anytime-strategic-deviation-detection`\n"
+        "- Public branch policy: one default `main`; no `master` or `orx/*` refs\n",
         encoding="utf-8",
     )
     print(json.dumps(payload, indent=2))

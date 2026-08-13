@@ -1,65 +1,81 @@
 # Status — hXO2OP0T4w
 
-## Current step
+## Current result
 
-Finalize the local evidence record, then repeat the complete pinned source
-protocol once from a clean execution-output directory before the publication
-gate.
+The evidence-release gate is **PASSED** and the six claim groups are
+**VERIFIED_SCOPED**. The strict universal paper-claim gate is **NOT_READY**:
+the evidence covers the pinned source protocols and finite independent checks,
+not every theorem quantifier, environment, or asymptotic regime.
+
+The canonical collection target is
+`MachineLearning-Nerd/icml26-anytime-strategic-deviation-detection`, with one
+public `main` branch.
 
 ## Source contract
 
-- Paper: arXiv `2601.05427`.
-- Author repository: `GauthierE/anytime-detection-deviation` at
+- Paper: [arXiv:2601.05427v3](https://arxiv.org/abs/2601.05427).
+- OpenReview: `hXO2OP0T4w`.
+- Authors: Etienne Gauthier, Francis Bach, and Michael I. Jordan.
+- Author repository:
+  `GauthierE/anytime-detection-deviation`.
+- Pinned commit:
   `42b8f0edfe76fb9dd006e9cab84f6cb8b75849c6`.
-- Released protocol: `normal-form.ipynb`, `soccer.ipynb`, and
-  `predator-prey.ipynb`. The repository states these are the three experiments
-  used for the paper figures.
-- Compute audit: finite NumPy/SciPy simulations; normal-form uses 300 runs by
-  4,000 rounds; Predator-Prey uses 100 trials per epsilon; no CUDA dependency.
+- Released source protocols: `normal-form.ipynb`, `soccer.ipynb`, and
+  `predator-prey.ipynb`.
+- Execution environment: Python 3.12 CPU with NumPy, SciPy, NashPy,
+  Matplotlib, Tueplots, Jupyter, nbclient, and pytest.
 
-## Completed
+## Completed evidence
 
-- Read-only source, code, data, and compute audit completed.
-- Claimed in the shared registry; no DineshAI Space, GitHub repository, or
-  backlog entry exists.
-- Pinned upstream source was vendored as `upstream/`.
-- Built an isolated Python 3.12 CPU environment with NumPy, SciPy, NashPy,
-  Matplotlib, Tueplots, and Jupyter.
-- The first unmodified normal-form execution reached only figure rendering and
-  failed because the author ICML plot preset requests a system `latex` binary.
-  Successful execution copies set only `text.usetex=False`; numerical cells,
-  parameters, seeds, trial counts, and source files are unchanged. Partial and
-  successful executed notebooks plus stdout/stderr logs are retained in
-  `outputs/`.
-- The full no-TeX execution copy of `normal-form.ipynb` then completed in
-  `575.696` CPU seconds with no code-cell error. It retained the released
-  300-run/4,000-round controls and alternative grid; its source output records
-  FDR mean stopping time `1545.4` versus FWER `1765.4` (1.15× speedup).
-- The full no-TeX execution copy of `soccer.ipynb` completed in `1088.916` CPU
-  seconds with no code-cell error. It retained the released 800-state,
-  100-trial protocol and records mean stopping times
-  `1431.8/369.7/140.1/62.6/18.0` for ε=`.05/.10/.20/.30/.50`.
-- The full no-TeX execution copy of `predator-prey.ipynb` completed in `78.279`
-  CPU seconds with no code-cell error. It retained all seven released epsilon
-  conditions and records a strictly decreasing detection-time curve.
-- An independent six-claim verifier and its negative controls pass: exact
-  e-value calibration, a 20,000-trajectory null FWER check, independent
-  alternative stopping-time comparison, mixture-LR identity, and parsing of
-  both full source stochastic-game curves. `pytest` reports four passing tests.
-- The local Trackio logbook was opened and its metadata now declares arXiv
-  `2601.05427` and the required `icml2026-repro` / `paper-hXO2OP0T4w` tags.
+- The three released author notebooks were executed at their recorded source
+  scale, with deterministic repeat copies.
+- The only execution deviation is the documented `text.usetex=False`
+  rendering fallback because the local environment does not provide a system
+  `latex` executable. Numerical cells, seeds, algorithms, and trial counts
+  are unchanged.
+- The independent verifier checks exact C1 e-value identities, a 20,000-run
+  null FWER calibration, the C3–C4 stopping-time comparison, the C5 mixture
+  likelihood-ratio identity, and released C6 stochastic-game curves.
+- The exact C6 audit independently fits the source curves, reruns the
+  paper's 10x10 Predator-Prey mixture protocol with 256 trials per epsilon,
+  tests five true magnitudes outside the monitor grid, and rejects scrambled
+  and inverse-linear controls.
+- The fail-closed source-scale gate record reports both complete notebook runs,
+  the repeat verifier, four passing verifier tests, and a clean secret scan.
+- Compact machine-readable records are committed in `outputs/`. The larger
+  upstream checkout and executed notebooks remain ignored; their hashes are
+  recorded by the gate and can be regenerated from the source contract.
 
-## Next action
+## Claim vector
 
-The complete clean repeat, Trackio evidence capture, independent verifier,
-four unit tests, secret scan, and fail-closed publication gate now pass. Next:
-create/push the public GitHub repository, atomically enqueue this one
-gate-complete paper, and wait for the shared drain to publish and verify the
-DineshAI/hXO2OP0T4w Space. Do not select another paper afterward: the user
-explicitly requested a pause once this paper is published.
+| Claim | Verdict | Evidence producer |
+| --- | --- | --- |
+| C1 | `VERIFIED_SCOPED` | `verify_claims.py::normal_form_identity` |
+| C2 | `VERIFIED_SCOPED` | `verify_claims.py::fwer_control` |
+| C3 | `VERIFIED_SCOPED` | `verify_claims.py::detection_rate_and_fdr` |
+| C4 | `VERIFIED_SCOPED` | `verify_claims.py::detection_rate_and_fdr` plus the source normal-form notebook |
+| C5 | `VERIFIED_SCOPED` | `verify_claims.py::mixture_identity` |
+| C6 | `VERIFIED_SCOPED` | `verify_claims.py::released_scalings`, `verify_claim6_scaling_exact.py`, and `audit_claim6_scaling_exact.py` |
 
-## Publication guard
+## Limitations
 
-Do not publish, create a public GitHub repository, or enqueue until every
-anchored claim has full-scale evidence, independent verification, negative
-controls, and a clean repeat run.
+- Numerical agreement on finite runs is evidence for the declared protocols,
+  not a proof of the paper's universal statements.
+- The independent verifier is deliberately small and does not replace a
+  second complete implementation of every author notebook.
+- The Grid Soccer and Predator-Prey source runs emit the paper's empirical
+  curves; the exact Claim 6 fresh run uses an algebraically equivalent
+  log-wealth calculation to avoid terminal floating-point overflow.
+- No multi-hardware, GPU, broader game-family, or production deployment study
+  is claimed.
+- The author source and raw executed notebooks are fetched/generated locally
+  rather than stored in this repository, so the full gate must be rerun after
+  a clean checkout.
+
+## Publication and branch state
+
+The repository is intended to be published as
+`icml26-anytime-strategic-deviation-detection`. The final public ref policy is
+one default `main` branch, no `master` or `orx/*` refs, and reachable commits
+attributed to `MachineLearning-Nerd`. See [BRANCH_AUDIT.md](BRANCH_AUDIT.md)
+and [SOURCE_MANIFEST.md](SOURCE_MANIFEST.md).
